@@ -1,0 +1,525 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 10vh;
+  background: cornsilk;
+
+  .logo {
+    color: brown;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-weight: bold;
+    font-size: 1rem;
+    color: green;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    transition: all 0.2s ease;
+  }
+  .nav-links a:hover {
+    color: lightgreen;
+  }
+
+  .burger {
+    // display: none;
+    cursor: pointer;
+  }
+  .burger div {
+    height: 0.2rem;
+    width: 2rem;
+    margin: 0.5rem;
+    background: brown;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links li {
+    margin: 3rem;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background: cornsilk;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+  .burger {
+    display: block;
+  }
+  .lineOne-active {
+    color: green;
+    transform: rotate(-45deg) translate(-5px, 6x);
+  }
+}
+.main-body {
+  // background: url(../images/sAP4PWgCuGAbndR9EJCQMX.jpg);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),
+    url("../images/sAP4PWgCuGAbndR9EJCQMX.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  color: rgb(221, 236, 8);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  h1 {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+  p {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    margin-left: 3rem;
+  }
+  button {
+    background: black;
+    color: white;
+    width: 8%;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    border: none;
+    transition: all 0.5s ease;
+  }
+  .dark:hover {
+    color: rgb(7, 187, 7);
+  }
+}
+
+.info {
+  background: #faf4ba;
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  h1 {
+    margin-top: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+}
+.start {
+  min-height: 30vh;
+  color: rgb(9, 192, 131);
+  background: rgb(79, 122, 251);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  h1 {
+    color: white;
+    margin-right: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  button {
+    width: 10%;
+    border-style: none;
+    background: rgba(0, 214, 0, 0.815);
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease;
+  }
+  button:hover {
+    width: 25%;
+    background: rgb(1, 165, 1);
+    color: rgb(209, 251, 209);
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    letter-spacing: 0.5rem;
+  }
+}
+.add {
+  min-height: 18vh;
+  background: rgb(30, 226, 4);
+  h1 {
+    width: 90%;
+    margin-top: 2rem;
+    margin: auto;
+  }
+}
+.footer1 {
+  min-height: 40vh;
+  background: rgb(31, 25, 25);
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .contact {
+    margin-bottom: 1rem;
+  }
+  a {
+    color: white;
+  }
+}
+
+.footer2 {
+  min-height: 20vh;
+  background: rgb(31, 25, 25);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.05rem solid white;
+}
+
+// End of page number one and the starting line for page number two
+
+.search {
+  .searchBtn {
+    color: white;
+    background: grey;
+    position: absolute;
+    top: 8.5%;
+    right: 0%;
+    width: 2rem;
+    height: 1rem;
+  }
+}
+
+.introduction {
+  min-height: 30vh;
+  color: rgb(85, 85, 85);
+  background: rgb(252, 237, 181);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-info {
+  background: rgb(236, 236, 236);
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .asia {
+    margin: 2rem 0rem;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-left: 0.2rem;
+      height: 50%;
+      width: 40%;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
+    }
+  }
+  .europe {
+    margin: 2rem 0rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-left: 0.2rem;
+      height: 50%;
+      width: 40%;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
+    }
+  }
+  .australia {
+    margin: 2rem 0rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-left: 0.2rem;
+      height: 50%;
+      width: 40%;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
+    }
+  }
+  .northAmerica {
+    margin: 2rem 0rem;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-left: 0.2rem;
+      height: 50%;
+      width: 40%;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
+    }
+  }
+  .southAmerica {
+    margin: 2rem 0rem;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-left: 0.2rem;
+      height: 50%;
+      width: 40%;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
+    }
+  }
+  .africa {
+    margin: 2rem 0rem;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-left: 0.2rem;
+      height: 50%;
+      width: 40%;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
+    }
+  }
+  .antarctica {
+    margin: 2rem 0rem;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-left: 0.2rem;
+      height: 50%;
+      width: 40%;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
+    }
+  }
+}
+// END OF THE SECOND PAGE AND STARTING LINE FOR CONTACT PAGE (PAGE 03l)
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  p {
+    color: grey;
+  }
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+// start of the last page which is page number five and this will contain cities
+.me {
+  min-height: 20vh;
+  background: rgb(240, 240, 240);
+  color: royalblue;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  p {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
